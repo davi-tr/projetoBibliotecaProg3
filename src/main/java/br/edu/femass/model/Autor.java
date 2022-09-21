@@ -7,6 +7,10 @@ public class Autor {
     private String sobreNome;
     private String nacionalidade;
 
+    public Autor(){
+
+    }
+
     public Autor(String nome, String sobreNome, String nacionalidade){
         this.nome = nome;
         this.sobreNome = sobreNome;
@@ -49,5 +53,4 @@ public class Autor {
         return Objects.equals(nacionalidade, autor.nacionalidade);
     }
 
-    }
-
+}

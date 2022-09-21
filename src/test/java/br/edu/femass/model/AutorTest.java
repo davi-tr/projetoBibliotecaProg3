@@ -3,8 +3,6 @@ package br.edu.femass.model;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class AutorTest {
 
     @Test
@@ -26,7 +24,7 @@ class AutorTest {
     void getSobreNome() {
         Autor autor = new Autor("Davi","Trajano","Brazil");
         String esperado = "Trajano";
-        Assertions.assertEquals(esperado, autor.getSobreNome());
+        Assertions.assertEquals(esperado, autor.getSobrenome());
     }
 
     @Test
@@ -34,7 +32,7 @@ class AutorTest {
         Autor autor = new Autor("Davi","Trajano","Brazil");
         String esperado = "França";
         autor.setSobreNome("França");
-        Assertions.assertEquals(esperado, autor.getSobreNome());
+        Assertions.assertEquals(esperado, autor.getSobrenome());
     }
 
     @Test
