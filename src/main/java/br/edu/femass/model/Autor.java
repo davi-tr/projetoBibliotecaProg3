@@ -53,4 +53,8 @@ public class Autor {
         return Objects.equals(nacionalidade, autor.nacionalidade);
     }
 
+    @Override
+    public String toString() {
+        return (this.nome+" "+this.sobreNome+" "+this.nacionalidade);
+    }
 }

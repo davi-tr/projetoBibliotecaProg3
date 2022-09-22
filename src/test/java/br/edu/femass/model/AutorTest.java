@@ -24,7 +24,7 @@ class AutorTest {
     void getSobreNome() {
         Autor autor = new Autor("Davi","Trajano","Brazil");
         String esperado = "Trajano";
-        Assertions.assertEquals(esperado, autor.getSobrenome());
+        Assertions.assertEquals(esperado, autor.getSobreNome());
     }
 
     @Test
@@ -32,7 +32,7 @@ class AutorTest {
         Autor autor = new Autor("Davi","Trajano","Brazil");
         String esperado = "França";
         autor.setSobreNome("França");
-        Assertions.assertEquals(esperado, autor.getSobrenome());
+        Assertions.assertEquals(esperado, autor.getSobreNome());
     }
 
     @Test

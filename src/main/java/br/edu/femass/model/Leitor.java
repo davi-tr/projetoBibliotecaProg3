@@ -51,5 +51,10 @@ public class Leitor {
         return prazoMaximoDevolucao;
     }
 
+    @Override
+    calculartempo(){
+        
+    }
+
 
 }
