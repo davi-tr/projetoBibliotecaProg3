@@ -8,18 +8,24 @@ public class Aluno extends Leitor{
     public Aluno(){
 
     }
+
     public Aluno(String nome, String endereco, String telefone){
-        long min = 50L;
-        long max = 100L;
         this.nome=nome;
         this.endereco=endereco;
         this.telefone=telefone;
-        this.codigo = (long)Math.floor(Math.random()*(max-min+1)+min);
+        this.codigo = proximoNumero++;
         this.prazoMaximoDevolucao = 15;
     }
 
     @Override
+    public void atualizarID() {
+        super.atualizarID();
+    }
+
+
+    @Override
     public String toString() {
+
         return  (this.nome+" "+this.endereco+" "+this.telefone);
     }
     @Override
@@ -33,4 +39,5 @@ public class Aluno extends Leitor{
         if (!Objects.equals(endereco, aluno.endereco)) return false;
         return Objects.equals(telefone, aluno.telefone);
     }
+
 }

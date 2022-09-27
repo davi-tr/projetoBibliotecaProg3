@@ -1,31 +1,13 @@
 [ {
-  "codigo" : null,
-  "nome" : "rkdsrshk",
-  "endereco" : "rjkshdkrfjs",
-  "telefone" : "2299999",
-  "prazoMaximoDevolucao" : null
-}, {
   "codigo" : 1,
-  "nome" : "teste",
-  "endereco" : "reeee",
-  "telefone" : "22999999",
+  "nome" : "jdkashdajk",
+  "endereco" : "dsakjhjask",
+  "telefone" : "22111111",
   "prazoMaximoDevolucao" : 15
 }, {
-  "codigo" : 1,
-  "nome" : "testreee",
-  "endereco" : "eeeeaaa",
-  "telefone" : "22999999111",
-  "prazoMaximoDevolucao" : 15
-}, {
-  "codigo" : -2321456989847256027,
-  "nome" : "ksjdhaksd",
-  "endereco" : "fkjdshfksjd",
-  "telefone" : "2211111",
-  "prazoMaximoDevolucao" : 15
-}, {
-  "codigo" : 83,
-  "nome" : "kjdhaskj",
-  "endereco" : "hkjsdhfjksh",
-  "telefone" : "22999111",
+  "codigo" : 2,
+  "nome" : "aaaaaaaaaaaaa",
+  "endereco" : "a1112wwww",
+  "telefone" : "22111111",
   "prazoMaximoDevolucao" : 15
 } ]

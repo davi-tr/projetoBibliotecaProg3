@@ -22,6 +22,7 @@ public class GuiAluno {
             public void actionPerformed(ActionEvent e) {
                 try{
                     Aluno aluno = new Aluno(txtNome.getText(),txtEndereco.getText(),txtTelefone.getText());
+                    aluno.atualizarID();
                     new DaoAluno().save(aluno);
                     JOptionPane.showMessageDialog(null, "Aluno salvo\n"+txtNome.getText()+" "
                             +txtTelefone.getText()+
