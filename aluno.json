@@ -10,4 +10,16 @@
   "endereco" : "a1112wwww",
   "telefone" : "22111111",
   "prazoMaximoDevolucao" : 15
+}, {
+  "codigo" : 3,
+  "nome" : "Teste",
+  "endereco" : "Novo",
+  "telefone" : "Casa",
+  "prazoMaximoDevolucao" : 15
+}, {
+  "codigo" : 4,
+  "nome" : "AAAAAAAAAAa",
+  "endereco" : "asasdad",
+  "telefone" : "novo",
+  "prazoMaximoDevolucao" : 15
 } ]

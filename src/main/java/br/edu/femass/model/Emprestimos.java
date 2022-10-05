@@ -42,7 +42,7 @@ public class Emprestimos {
                 long tempodeAtraso
                         = difference_In_Days - 15;
 
-                System.out.println("Atrasado em " + tempodeAtraso +" Dias");
+                System.out.println("Atrasado em " + tempodeAtraso + " Dias");
             }
         }
         catch (ParseException e) {

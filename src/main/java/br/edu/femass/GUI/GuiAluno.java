@@ -26,7 +26,7 @@ public class GuiAluno {
                     new DaoAluno().save(aluno);
                     JOptionPane.showMessageDialog(null, "Aluno salvo\n"+txtNome.getText()+" "
                             +txtTelefone.getText()+
-                            "\n                   "
+                            "\n"
                             +txtEndereco.getText());
 
                 } catch (Exception ex){

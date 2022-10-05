@@ -37,7 +37,6 @@ public class Leitor {
         }
     }
 
-
     public void setCodigo(Long codigo) {
         this.codigo = codigo;
     }
@@ -71,7 +70,6 @@ public class Leitor {
     public Integer getPrazoMaximoDevolucao() {
         return prazoMaximoDevolucao;
     }
-
 
 
 }

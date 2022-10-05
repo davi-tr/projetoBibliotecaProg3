@@ -1,0 +1,36 @@
+[ {
+  "codigo" : 5,
+  "nome" : "tsadas",
+  "endereco" : "sdasdsa",
+  "telefone" : "999999111",
+  "prazoMaximoDevolucao" : 30,
+  "disciplina" : null
+}, {
+  "codigo" : 5,
+  "nome" : "sei la",
+  "endereco" : "ewqeqwe",
+  "telefone" : "299911",
+  "prazoMaximoDevolucao" : 30,
+  "disciplina" : null
+}, {
+  "codigo" : 5,
+  "nome" : "sdasdasd",
+  "endereco" : "wewea",
+  "telefone" : "dasdasd",
+  "prazoMaximoDevolucao" : 30,
+  "disciplina" : "Matematica"
+}, {
+  "codigo" : 5,
+  "nome" : "Lauro",
+  "endereco" : "Rua J",
+  "telefone" : "22111111",
+  "prazoMaximoDevolucao" : 30,
+  "disciplina" : "Historia"
+}, {
+  "codigo" : 5,
+  "nome" : "Lauro",
+  "endereco" : "Rua J",
+  "telefone" : "2211111",
+  "prazoMaximoDevolucao" : 30,
+  "disciplina" : "Prog"
+} ]
