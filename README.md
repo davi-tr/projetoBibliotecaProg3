@@ -1,6 +1,6 @@
 # Projeto Biblioteca (Programação III)
 ### Este repositório é destinado para postagem e controle de versionamento do projeto que tem o proposito de criar um sistema de controle para uma Biblioteca.
-### Prova realizada utilizando Java.
+### Projeto realizado utilizando Java (JDK 11).
 <div align="center">
 <img alt="davi-java" width="100" heigt="100" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg">
 </div>
