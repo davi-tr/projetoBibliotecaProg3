@@ -24,7 +24,6 @@ public class GuiProfessor {
             public void actionPerformed(ActionEvent e) {
                 try{
                     Professor professor = new Professor(txtNome.getText(),txtEndereco.getText(),txtTelefone.getText(),txtDisciplina.getText());
-                    professor.atualizarID();
                     new DaoProfessor().save(professor);
                     JOptionPane.showMessageDialog(null, "Professor salvo\n"+txtNome.getText()+" "+
                             " "+txtSobrenome.getText()+" "

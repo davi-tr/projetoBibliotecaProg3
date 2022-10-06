@@ -1,5 +1,9 @@
 package br.edu.femass.model;
 
+import br.edu.femass.dao.DaoAluno;
+import br.edu.femass.dao.DaoProfessor;
+
+import java.util.List;
 import java.util.Objects;
 
 public class Professor extends Leitor{
@@ -15,10 +19,22 @@ public class Professor extends Leitor{
         this.disciplina=disciplina;
         this.codigo = proximoNumero++;
         this.prazoMaximoDevolucao = 30;
+        atualizarID();
     }
 
     public void atualizarID() {
-        super.atualizarID();
+        Long maior = 0L;
+        try {
+            List<Professor> professores = new DaoProfessor().getAll();
+            for (Professor a : professores) {
+                if (a.getCodigo() > maior) {
+                    maior = a.getCodigo();
+                    setCodigo(maior + 1);
+                }
+            }
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public String toString() {

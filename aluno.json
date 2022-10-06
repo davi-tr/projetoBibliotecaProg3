@@ -22,4 +22,22 @@
   "endereco" : "asasdad",
   "telefone" : "novo",
   "prazoMaximoDevolucao" : 15
+}, {
+  "codigo" : 5,
+  "nome" : "aaaa",
+  "endereco" : "weqw",
+  "telefone" : "2312313",
+  "prazoMaximoDevolucao" : 15
+}, {
+  "codigo" : 6,
+  "nome" : "djashdgahj",
+  "endereco" : "jgdsahdfgsj",
+  "telefone" : "22111111",
+  "prazoMaximoDevolucao" : 15
+}, {
+  "codigo" : 7,
+  "nome" : "aaaa",
+  "endereco" : "",
+  "telefone" : "",
+  "prazoMaximoDevolucao" : 15
 } ]
