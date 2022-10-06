@@ -8,7 +8,7 @@
 #### Os requisitos do projeto estão listados abaixo..
 Classes mapeadas para o Java | Interface gráfica usando Swing | Persistência usando JSON | Testes unitários das classes de negócios e das persistências
 :------------ | :-------------| :-------------| :-------------
-:white_check_mark: | :heavy_check_mark: |  :white_check_mark: | :heavy_check_mark:
+:white_check_mark: | :clock3: |  :clock3: | :clock3:
 
 #### Meu linkedin abaixo.
  <a href="https://www.linkedin.com/in/davi-trajano-902483205" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
