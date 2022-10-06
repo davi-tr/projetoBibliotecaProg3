@@ -18,7 +18,19 @@ public class Livro {
     public Livro(String titulo, List<Autor> autores ){
         this.titulo=titulo;
         listaAutor.addAll(autores);
+        this.codigo = proximoNumero ++;
         atualizarID();
+    }
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public List<Autor> getListaAutor() {
+        return listaAutor;
+    }
+
+    public void setListaAutor(List<Autor> listaAutor) {
+        this.listaAutor = listaAutor;
     }
 
     public Long getCodigo() {
@@ -46,5 +58,10 @@ public class Livro {
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
+    }
+
+    @Override
+    public String toString() {
+        return (this.titulo+" "+this.codigo+" "+this.listaAutor);
     }
 }

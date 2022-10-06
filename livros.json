@@ -1,0 +1,61 @@
+[ {
+  "codigo" : 1,
+  "listaAutor" : [ {
+    "nome" : "rtes",
+    "sobreNome" : "rewr",
+    "nacionalidade" : "rwerwer"
+  } ],
+  "titulo" : null
+}, {
+  "codigo" : 2,
+  "listaAutor" : [ {
+    "nome" : "Karl",
+    "sobreNome" : "Marx",
+    "nacionalidade" : "Alemão"
+  } ],
+  "titulo" : null
+}, {
+  "codigo" : 3,
+  "listaAutor" : [ {
+    "nome" : "Xi",
+    "sobreNome" : "Jinping",
+    "nacionalidade" : "China"
+  } ],
+  "titulo" : null
+}, {
+  "codigo" : 4,
+  "listaAutor" : [ {
+    "nome" : "Frederich",
+    "sobreNome" : "Engels",
+    "nacionalidade" : "Alemão"
+  } ],
+  "titulo" : null
+}, {
+  "codigo" : 5,
+  "listaAutor" : [ {
+    "nome" : "Karl",
+    "sobreNome" : "Marx",
+    "nacionalidade" : "Alemão"
+  }, {
+    "nome" : "Frederich",
+    "sobreNome" : "Engels",
+    "nacionalidade" : "Alemão"
+  } ],
+  "titulo" : "Das Capital"
+}, {
+  "codigo" : 6,
+  "listaAutor" : [ {
+    "nome" : "Davi",
+    "sobreNome" : "Trajano",
+    "nacionalidade" : "Brazil"
+  } ],
+  "titulo" : "Curupira"
+}, {
+  "codigo" : 7,
+  "listaAutor" : [ {
+    "nome" : "Xi",
+    "sobreNome" : "Jinping",
+    "nacionalidade" : "China"
+  } ],
+  "titulo" : "Saci"
+} ]
