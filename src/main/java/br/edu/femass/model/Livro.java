@@ -7,10 +7,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Livro {
+    protected String titulo;
     protected Long codigo;
     protected static Long proximoNumero = 1l;
     List<Autor> listaAutor = new ArrayList();
-    protected String titulo;
+
     public Livro(){
 
     }

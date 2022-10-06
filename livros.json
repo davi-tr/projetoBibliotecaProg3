@@ -1,36 +1,37 @@
 [ {
+  "titulo" : null,
   "codigo" : 1,
   "listaAutor" : [ {
     "nome" : "rtes",
     "sobreNome" : "rewr",
     "nacionalidade" : "rwerwer"
-  } ],
-  "titulo" : null
+  } ]
 }, {
+  "titulo" : null,
   "codigo" : 2,
   "listaAutor" : [ {
     "nome" : "Karl",
     "sobreNome" : "Marx",
     "nacionalidade" : "Alemão"
-  } ],
-  "titulo" : null
+  } ]
 }, {
+  "titulo" : null,
   "codigo" : 3,
   "listaAutor" : [ {
     "nome" : "Xi",
     "sobreNome" : "Jinping",
     "nacionalidade" : "China"
-  } ],
-  "titulo" : null
+  } ]
 }, {
+  "titulo" : null,
   "codigo" : 4,
   "listaAutor" : [ {
     "nome" : "Frederich",
     "sobreNome" : "Engels",
     "nacionalidade" : "Alemão"
-  } ],
-  "titulo" : null
+  } ]
 }, {
+  "titulo" : "Das Capital",
   "codigo" : 5,
   "listaAutor" : [ {
     "nome" : "Karl",
@@ -40,22 +41,29 @@
     "nome" : "Frederich",
     "sobreNome" : "Engels",
     "nacionalidade" : "Alemão"
-  } ],
-  "titulo" : "Das Capital"
+  } ]
 }, {
+  "titulo" : "Curupira",
   "codigo" : 6,
   "listaAutor" : [ {
     "nome" : "Davi",
     "sobreNome" : "Trajano",
     "nacionalidade" : "Brazil"
-  } ],
-  "titulo" : "Curupira"
+  } ]
 }, {
+  "titulo" : "Saci",
   "codigo" : 7,
   "listaAutor" : [ {
     "nome" : "Xi",
     "sobreNome" : "Jinping",
     "nacionalidade" : "China"
-  } ],
-  "titulo" : "Saci"
+  } ]
+}, {
+  "titulo" : "Testezin",
+  "codigo" : 8,
+  "listaAutor" : [ {
+    "nome" : "Xi",
+    "sobreNome" : "Jinping",
+    "nacionalidade" : "China"
+  } ]
 } ]
