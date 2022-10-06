@@ -1,6 +1,5 @@
 package br.edu.femass.GUI;
 
-import br.edu.femass.dao.DaoAluno;
 import br.edu.femass.dao.DaoProfessor;
 import br.edu.femass.model.Professor;
 
