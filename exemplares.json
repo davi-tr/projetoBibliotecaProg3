@@ -1,0 +1,13 @@
+[ {
+  "codigo" : 1,
+  "dataAq" : "07/10/2022 04:32:28",
+  "listaLivro" : [ {
+    "titulo" : "Curupira",
+    "codigo" : 6,
+    "listaAutor" : [ {
+      "nome" : "Davi",
+      "sobreNome" : "Trajano",
+      "nacionalidade" : "Brazil"
+    } ]
+  } ]
+} ]
