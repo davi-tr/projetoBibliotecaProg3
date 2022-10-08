@@ -12,17 +12,18 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class Emprestimos {
-    @JsonFormat(pattern = "yyyy-MM-dd")
+
     protected LocalDateTime data;
-    @JsonFormat(pattern = "yyyy-MM-dd")
+
     protected LocalDateTime devolucao;
-    @JsonFormat(pattern = "yyyy-MM-dd")
     protected LocalDateTime prev;
 
     public Emprestimos(){
+
     }
 
-    List<Leitor> listaLeito = new ArrayList();
+    List<Aluno> listaLeito = new ArrayList();
+
 
     public static void calculartempo(String dataInicio, String dataFim){
         SimpleDateFormat sdf
@@ -66,16 +67,15 @@ public class Emprestimos {
     }
 
 
-    public Emprestimos(List<Leitor> leitores){
+    public Emprestimos(List<Aluno> alunos){
+        listaLeito.addAll(alunos);
         this.data=LocalDateTime.now();
         this.devolucao=LocalDateTime.now();
-        listaLeito.addAll(leitores);
-        for (Leitor l : leitores){
-            if (l.getClass()== Aluno.class){
-                System.out.println("Teste");
-            }
-        }
-        //this.prev=LocalDateTime.now().plusDays(prazoMaximoDevolucao);
+        this.prev=LocalDateTime.now().plusDays(15);
+    }
+
+    public List<Aluno> getListaLeito() {
+        return listaLeito;
     }
 
     public LocalDateTime getPrev() {

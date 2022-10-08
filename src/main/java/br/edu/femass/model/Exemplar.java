@@ -11,7 +11,7 @@ import java.util.List;
 public class Exemplar {
 
     protected Long codigo;
-    @JsonFormat(pattern = "yyyy-MM-dd")
+
     protected LocalDateTime dataAq;
     protected static Long proximoNumero = 1l;
 
@@ -31,6 +31,7 @@ public class Exemplar {
         atualizarID();
         this.dataAq = LocalDateTime.now();
     }
+
 
     public LocalDateTime getDataAq() {
         return dataAq;
