@@ -1,13 +1,17 @@
 [ {
   "codigo" : 1,
-  "dataAq" : "07/10/2022 04:32:28",
+  "dataAq" : "2022-10-08",
   "listaLivro" : [ {
-    "titulo" : "Curupira",
-    "codigo" : 6,
+    "titulo" : "Das Capital",
+    "codigo" : 5,
     "listaAutor" : [ {
-      "nome" : "Davi",
-      "sobreNome" : "Trajano",
-      "nacionalidade" : "Brazil"
+      "nome" : "Karl",
+      "sobreNome" : "Marx",
+      "nacionalidade" : "Alemão"
+    }, {
+      "nome" : "Frederich",
+      "sobreNome" : "Engels",
+      "nacionalidade" : "Alemão"
     } ]
   } ]
 } ]

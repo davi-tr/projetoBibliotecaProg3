@@ -1,6 +1,7 @@
 package br.edu.femass.model;
 
 import br.edu.femass.dao.DaoExemplar;
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -10,6 +11,7 @@ import java.util.List;
 public class Exemplar {
 
     protected Long codigo;
+    @JsonFormat(pattern = "yyyy-MM-dd")
     protected LocalDateTime dataAq;
     protected static Long proximoNumero = 1l;
 
@@ -30,8 +32,8 @@ public class Exemplar {
         this.dataAq = LocalDateTime.now();
     }
 
-    public String getDataAq() {
-        return dataAq.format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss"));
+    public LocalDateTime getDataAq() {
+        return dataAq;
     }
 
     public void atualizarID() {
