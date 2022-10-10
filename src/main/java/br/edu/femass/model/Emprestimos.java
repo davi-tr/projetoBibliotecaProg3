@@ -1,16 +1,29 @@
 package br.edu.femass.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class Emprestimos {
+
     protected LocalDateTime data;
-    protected String devolucao;
+
+    protected LocalDateTime devolucao;
     protected LocalDateTime prev;
+
+    public Emprestimos(){
+
+    }
+
+    List<Aluno> listaLeito = new ArrayList();
+
 
     public static void calculartempo(String dataInicio, String dataFim){
         SimpleDateFormat sdf
@@ -53,30 +66,28 @@ public class Emprestimos {
 
     }
 
-    public Emprestimos(){
 
-    }
-
-
-    public Emprestimos(LocalDateTime data){
-        SimpleDateFormat volta
-                = new SimpleDateFormat(
-                "dd-MM-yyyy");
-        this.data=data;
-        this.devolucao=data.format(DateTimeFormatter.ofPattern("dd-MM-yyyy"));
+    public Emprestimos(List<Aluno> alunos){
+        listaLeito.addAll(alunos);
+        this.data=LocalDateTime.now();
+        this.devolucao=LocalDateTime.now();
         this.prev=LocalDateTime.now().plusDays(15);
     }
 
-    public String getPrev() {
-        return prev.format(DateTimeFormatter.ofPattern("dd-MM-yyyy"));
+    public List<Aluno> getListaLeito() {
+        return listaLeito;
     }
 
-    public String getDevolucao() {
+    public LocalDateTime getPrev() {
+        return prev;
+    }
+
+    public LocalDateTime getDevolucao() {
         return devolucao;
     }
 
-    public String getData() {
-        return data.format(DateTimeFormatter.ofPattern("dd-MM-yyyy"));
+    public LocalDateTime getData() {
+        return data;
     }
 
     @Override
@@ -86,19 +97,6 @@ public class Emprestimos {
                 '}';
     }
 
-    public static void main(String[] args)
-    {
-        String dataInicio
-                = "01-08-2022";
-
-        Emprestimos emprestimos = new Emprestimos(LocalDateTime.now());
-        String dataFim = emprestimos.getData();
-        System.out.println(emprestimos.getData());
-        System.out.println(emprestimos.getPrev());
-        System.out.println(emprestimos.getDevolucao());
-        calculartempo(dataInicio,
-                dataFim);
-    }
 }
 
 
