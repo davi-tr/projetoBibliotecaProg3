@@ -44,6 +44,7 @@ public class GuiEmprestimo {
             }
         });
     }
+    
 
     private void updateCombo() {
         try {

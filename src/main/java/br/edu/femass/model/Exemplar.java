@@ -1,10 +1,10 @@
 package br.edu.femass.model;
 
 import br.edu.femass.dao.DaoExemplar;
-import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
 
 import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,14 +19,25 @@ public class Exemplar {
         return listaLivro;
     }
 
+    protected Integer quantidade;
+
+
+    protected Boolean disponivel;
+
     List<Livro> listaLivro = new ArrayList();
 
 
     public Exemplar(){
     }
 
-    public Exemplar(List<Livro> livros){
+    public Exemplar(List<Livro> livros, Integer quantidade){
         listaLivro.addAll(livros);
+        this.quantidade=quantidade;
+        if(quantidade>1){
+            this.disponivel=true;
+        }else {
+            this.disponivel=false;
+        }
         this.codigo = proximoNumero++;
         atualizarID();
         this.dataAq = LocalDateTime.now();
@@ -35,6 +46,15 @@ public class Exemplar {
 
     public LocalDateTime getDataAq() {
         return dataAq;
+    }
+
+
+    public Boolean getDisponivel() {
+        return disponivel;
+    }
+
+    public Integer getQuantidade() {
+        return quantidade;
     }
 
     public void atualizarID() {

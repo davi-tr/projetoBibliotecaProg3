@@ -1,6 +1,8 @@
 [ {
   "codigo" : 1,
-  "dataAq" : [ 2022, 10, 8, 2, 35, 52, 211852900 ],
+  "dataAq" : [ 2022, 10, 10, 20, 38, 54, 98049000 ],
+  "quantidade" : 2,
+  "disponivel" : true,
   "listaLivro" : [ {
     "titulo" : "Das Capital",
     "codigo" : 5,
@@ -16,7 +18,9 @@
   } ]
 }, {
   "codigo" : 2,
-  "dataAq" : [ 2022, 10, 10, 17, 16, 39, 252668200 ],
+  "dataAq" : [ 2022, 10, 10, 20, 39, 1, 471812000 ],
+  "quantidade" : 3,
+  "disponivel" : true,
   "listaLivro" : [ {
     "titulo" : "Saci",
     "codigo" : 7,

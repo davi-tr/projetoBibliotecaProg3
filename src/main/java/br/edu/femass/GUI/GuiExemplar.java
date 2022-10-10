@@ -1,9 +1,7 @@
 package br.edu.femass.GUI;
 
-import br.edu.femass.dao.DaoAutor;
 import br.edu.femass.dao.DaoExemplar;
 import br.edu.femass.dao.DaoLivro;
-import br.edu.femass.model.Autor;
 import br.edu.femass.model.Exemplar;
 import br.edu.femass.model.Livro;
 
@@ -18,14 +16,21 @@ public class GuiExemplar {
     private JPanel jPanel;
     private JList lstLivros;
     private JButton btnSalvar;
+    private JSpinner spQuantidade;
 
     public GuiExemplar() {
         updateList();
         btnSalvar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                try {
+                    spQuantidade.commitEdit();
+                } catch ( java.text.ParseException l ) {
+                    
+                }
+                int value = (Integer) spQuantidade.getValue();
                 try{
-                    Exemplar exemplar = new Exemplar(lstLivros.getSelectedValuesList());
+                    Exemplar exemplar = new Exemplar(lstLivros.getSelectedValuesList(),value);
                     updateList();
                     new DaoExemplar().save(exemplar);
                     JOptionPane.showMessageDialog(null,"Exemplar Salvo");
