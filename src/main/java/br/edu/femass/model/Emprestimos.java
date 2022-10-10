@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -13,16 +12,16 @@ import java.util.concurrent.TimeUnit;
 
 public class Emprestimos {
 
-    protected LocalDateTime data;
 
+    protected LocalDateTime data;
     protected LocalDateTime devolucao;
     protected LocalDateTime prev;
 
     public Emprestimos(){
 
     }
-
-    List<Aluno> listaLeito = new ArrayList();
+    @JsonFormat(with = JsonFormat.Feature.ACCEPT_SINGLE_VALUE_AS_ARRAY)
+    List<Leitor> listaLeito = new ArrayList();
 
 
     public static void calculartempo(String dataInicio, String dataFim){
@@ -67,16 +66,17 @@ public class Emprestimos {
     }
 
 
-    public Emprestimos(List<Aluno> alunos){
+    public Emprestimos(List<Leitor> alunos)  {
         listaLeito.addAll(alunos);
         this.data=LocalDateTime.now();
         this.devolucao=LocalDateTime.now();
         this.prev=LocalDateTime.now().plusDays(15);
     }
 
-    public List<Aluno> getListaLeito() {
+    public List<Leitor> getListaLeito() {
         return listaLeito;
     }
+
 
     public LocalDateTime getPrev() {
         return prev;

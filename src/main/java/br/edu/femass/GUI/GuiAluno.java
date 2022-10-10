@@ -1,9 +1,7 @@
 package br.edu.femass.GUI;
 
 import br.edu.femass.dao.DaoAluno;
-import br.edu.femass.dao.DaoAutor;
 import br.edu.femass.model.Aluno;
-import br.edu.femass.model.Autor;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;

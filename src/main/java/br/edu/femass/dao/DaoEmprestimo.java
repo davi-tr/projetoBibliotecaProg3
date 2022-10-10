@@ -16,7 +16,7 @@ public class DaoEmprestimo extends Persistencia<Emprestimos> implements Dao<Empr
     public void save (Emprestimos emprestimos) throws Exception{
         List<Emprestimos> emprestados = getAll();
         emprestados.add(emprestimos);
-        String json = getObjectmapper().writerWithDefaultPrettyPrinter().writeValueAsString(emprestimos);
+        String json = getObjectmapper().writerWithDefaultPrettyPrinter().writeValueAsString(emprestados);
 
         FileOutputStream out = new FileOutputStream(NOMEARQUIVO);
         out.write(json.getBytes());

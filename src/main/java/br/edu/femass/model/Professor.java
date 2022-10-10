@@ -35,6 +35,9 @@ public class Professor extends Leitor{
             throw new RuntimeException(e);
         }
     }
+    public String getNomeClasse(){
+        return ("Professor");
+    }
 
     public String toString() {
 

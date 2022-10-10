@@ -2,7 +2,6 @@ package br.edu.femass.model;
 
 import java.util.Objects;
 
-import java.util.Random;
 public class Aluno extends Leitor{
 
     public Aluno(){
@@ -17,6 +16,9 @@ public class Aluno extends Leitor{
         this.prazoMaximoDevolucao = 15;
     }
 
+    public String getNomeClasse(){
+        return ("Aluno");
+    }
     @Override
     public void atualizarID() {
         super.atualizarID();
