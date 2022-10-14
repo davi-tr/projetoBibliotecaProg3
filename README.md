@@ -8,7 +8,7 @@
 #### Os requisitos do projeto estão listados abaixo..
 Classes mapeadas para o Java | Interface gráfica usando Swing | Persistência usando JSON | Testes unitários das classes de negócios e das persistências
 :------------ | :-------------| :-------------| :-------------
-![50%]( https://progress-bar.dev/100/?scale=100&width=145&color=babaca) | ![50%](https://progress-bar.dev/90/?scale=100&width=150&color=babaca) |  ![50%](https://progress-bar.dev/100/?scale=100&width=140&color=babaca) | ![50%](https://progress-bar.dev/20/?scale=100&width=290&color=babaca)
+![50%]( https://progress-bar.dev/100/?scale=100&width=145&color=babaca) | ![50%](https://progress-bar.dev/90/?scale=100&width=150&color=babaca) |  ![50%](https://progress-bar.dev/100/?scale=100&width=140&color=babaca) | ![50%](https://progress-bar.dev/40/?scale=100&width=290&color=babaca)
 
 #### Meu linkedin abaixo.
  <a href="https://www.linkedin.com/in/davi-trajano-902483205" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
