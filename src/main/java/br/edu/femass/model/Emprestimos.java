@@ -16,6 +16,7 @@ public class Emprestimos {
     protected LocalDateTime data;
     protected LocalDateTime devolucao;
     protected LocalDateTime prev;
+    public String mensagem;
 
     public Emprestimos(){
 
@@ -24,7 +25,7 @@ public class Emprestimos {
     List<Leitor> listaLeito = new ArrayList();
 
 
-    public static void calculartempo(String dataInicio, String dataFim){
+    public void calculartempo(String dataInicio, String dataFim){
         SimpleDateFormat sdf
                 = new SimpleDateFormat(
                 "dd-MM-yyyy");
@@ -55,11 +56,10 @@ public class Emprestimos {
             if (difference_In_Days > 15){
                 long tempodeAtraso
                         = difference_In_Days - 15;
-
                 System.out.println("Atrasado em " + tempodeAtraso + " Dias");
-            }
-        }
-        catch (ParseException e) {
+                mensagem = "Atrasado em " + tempodeAtraso + " Dias";
+            } else mensagem = "Não está atrasado";
+        } catch (ParseException e) {
             e.printStackTrace();
         }
 
@@ -71,6 +71,10 @@ public class Emprestimos {
         this.data=LocalDateTime.now();
         this.devolucao=LocalDateTime.now();
         this.prev=LocalDateTime.now().plusDays(15);
+    }
+
+    public String getMensagem() {
+        return mensagem;
     }
 
     public List<Leitor> getListaLeito() {

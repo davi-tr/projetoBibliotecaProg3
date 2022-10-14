@@ -12,9 +12,9 @@ class EmprestimosTest {
         Emprestimos emprestimos = new Emprestimos();
         String dataInicio = "22/07/2022";
         String dataFim = "02/08/2022";
-        String valor = emprestimos.calculartempo("22/07/2022","02/08/2022");
+        emprestimos.calculartempo(dataInicio,dataFim);
         String expected = "Esta atrasado em 30 dias";
-        Assertions.assertEquals(expected,emprestimos.calculartempo("22/07/2022","02/08/2022"));
+        Assertions.assertEquals(expected,emprestimos.getMensagem());
     }
 
     @Test

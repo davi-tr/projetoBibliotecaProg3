@@ -30,6 +30,7 @@ public class GuiEmprestimo {
             public void actionPerformed(ActionEvent e) {
                 try{
                     Emprestimos emprestimos = new Emprestimos(lstProfessores.getSelectedValuesList());
+                    emprestimos.calculartempo("22/07/2022","02/08/2022");
                     updateCombo();
                     updateList();
                     try {
