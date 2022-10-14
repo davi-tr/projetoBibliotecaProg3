@@ -29,11 +29,9 @@ public class GuiInicial {
                     GuiMenuBibli guiMenuBibli = new GuiMenuBibli();
                     JFrame framebibi = new JFrame("Menu Bibliotecario");
                     framebibi.setContentPane(guiMenuBibli.getjPanel());
-                    framebibi.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                    framebibi.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
                     framebibi.pack();
                     framebibi.setVisible(true);
-                    framebibi.setVisible(true);
-
                 }else if (Username.equals(Atendente) && Arrays.equals(input,senhaAt)){
                     JOptionPane.showMessageDialog(null,"Senha Correta");
                     System.exit(0);
@@ -49,6 +47,16 @@ public class GuiInicial {
 
     public Boolean getDispo() {
         return dispo;
+    }
+    public void run(){
+        GuiInicial guiInicial = new GuiInicial();
+        JFrame frame = new JFrame("Sistema Bibliotecario");
+        frame.setContentPane(guiInicial.getjPanel());
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.pack();
+        frame.setVisible(true);
+        guiInicial.getDispo();
+
     }
 
 //    public static void main(String[] args) {

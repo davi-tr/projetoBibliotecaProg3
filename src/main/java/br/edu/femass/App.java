@@ -13,15 +13,8 @@ public class App {
 
 
     public static void main(String[] args) {
-         GuiInicial guiInicial = new GuiInicial();
-         JFrame frame = new JFrame("Sistema Bibliotecario");
-         frame.setContentPane(guiInicial.getjPanel());
-         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-         frame.pack();
-         frame.setVisible(true);
-         if(guiInicial.getDispo() == true){
-             frame.setVisible(true);
-         }
+        GuiInicial guiInicial = new GuiInicial();
+        guiInicial.run();
     }
 }
 

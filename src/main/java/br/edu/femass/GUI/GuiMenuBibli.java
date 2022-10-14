@@ -4,7 +4,12 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class GuiMenuBibli {
+import java.awt.*;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
+import static jdk.internal.net.http.common.Utils.close;
+
+public class GuiMenuBibli extends Frame {
     private JPanel jPanel;
     private JButton btnLivro;
     private JButton btnAutores;
@@ -18,7 +23,7 @@ public class GuiMenuBibli {
                 GuiLivro guiLivro = new GuiLivro();
                 JFrame frame = new JFrame("Projeto");
                 frame.setContentPane(guiLivro.jPanel);
-                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
                 frame.pack();
                 frame.setVisible(true);
             }
@@ -48,7 +53,7 @@ public class GuiMenuBibli {
         btnVoltar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                dispose();
             }
         });
     }
