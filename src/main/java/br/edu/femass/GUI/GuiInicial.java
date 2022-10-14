@@ -13,6 +13,7 @@ public class GuiInicial {
     Object Atendente = "Atendente";
     Object Bibliotecario = "Bibliotecario";
     private Object usuario;
+    protected Boolean dispo = false;
 
     public GuiInicial() {
         cboUser.addItem(Bibliotecario);
@@ -25,8 +26,7 @@ public class GuiInicial {
                 char[] senhaAt = {'1','2','3','4'};
                 Object Username = cboUser.getSelectedItem();
                 if(Username.equals(Bibliotecario) && Arrays.equals(input,senhaBibl)){
-                    JOptionPane.showMessageDialog(null,"Senha Correta");
-                    System.exit(0);
+                    dispo = true;
                 }else if (Username.equals(Atendente) && Arrays.equals(input,senhaAt)){
                     JOptionPane.showMessageDialog(null,"Senha Correta");
                     System.exit(0);
@@ -36,14 +36,20 @@ public class GuiInicial {
             }
         });
     }
-
-
-    public static void main(String[] args) {
-        GuiInicial guiInicial = new GuiInicial();
-        JFrame frame = new JFrame("Login");
-        frame.setContentPane(guiInicial.jPanel);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.pack();
-        frame.setVisible(true);
+    public JPanel getjPanel() {
+        return jPanel;
     }
+
+    public Boolean getDispo() {
+        return dispo;
+    }
+
+//    public static void main(String[] args) {
+//        GuiInicial guiInicial = new GuiInicial();
+//        JFrame frame = new JFrame("Login");
+//        frame.setContentPane(guiInicial.jPanel);
+//        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//        frame.pack();
+//        frame.setVisible(true);
+//    }
 }

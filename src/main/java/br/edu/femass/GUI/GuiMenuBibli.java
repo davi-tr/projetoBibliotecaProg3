@@ -37,4 +37,8 @@ public class GuiMenuBibli {
             }
         });
     }
+
+    public JPanel getjPanel() {
+        return jPanel;
+    }
 }

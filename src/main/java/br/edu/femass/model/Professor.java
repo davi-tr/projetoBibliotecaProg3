@@ -41,7 +41,7 @@ public class Professor extends Leitor{
 
     public String toString() {
 
-        return  (this.codigo+" "+this.nome+" "+this.endereco+" "+this.telefone+" "+this.disciplina);
+        return  (this.nome+" "+this.endereco+" "+this.telefone+" "+this.disciplina);
     }
 
     public String getDisciplina() {
