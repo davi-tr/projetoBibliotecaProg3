@@ -13,7 +13,7 @@ import java.awt.event.ActionListener;
 import java.util.List;
 
 public class GuiExemplar {
-    private JPanel jPanel;
+    protected JPanel jPanel;
     private JList lstLivros;
     private JButton btnSalvar;
     private JSpinner spQuantidade;

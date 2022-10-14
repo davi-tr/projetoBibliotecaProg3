@@ -30,4 +30,18 @@
       "nacionalidade" : "China"
     } ]
   } ]
+}, {
+  "codigo" : 3,
+  "dataAq" : [ 2022, 10, 14, 2, 57, 55, 791792700 ],
+  "quantidade" : 2,
+  "disponivel" : true,
+  "listaLivro" : [ {
+    "titulo" : "Comumismo",
+    "codigo" : 9,
+    "listaAutor" : [ {
+      "nome" : "Karl",
+      "sobreNome" : "Marx",
+      "nacionalidade" : "Alemão"
+    } ]
+  } ]
 } ]

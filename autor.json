@@ -66,4 +66,12 @@
   "nome" : "Paulo",
   "sobreNome" : "Freire",
   "nacionalidade" : "Brasileiro"
+}, {
+  "nome" : "Casimiro",
+  "sobreNome" : "Vasco",
+  "nacionalidade" : "Brasileiro"
+}, {
+  "nome" : "Casimiro",
+  "sobreNome" : "Vasco",
+  "nacionalidade" : "Novo"
 } ]

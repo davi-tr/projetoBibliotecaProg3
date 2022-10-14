@@ -26,7 +26,14 @@ public class GuiInicial {
                 char[] senhaAt = {'1','2','3','4'};
                 Object Username = cboUser.getSelectedItem();
                 if(Username.equals(Bibliotecario) && Arrays.equals(input,senhaBibl)){
-                    dispo = true;
+                    GuiMenuBibli guiMenuBibli = new GuiMenuBibli();
+                    JFrame framebibi = new JFrame("Menu Bibliotecario");
+                    framebibi.setContentPane(guiMenuBibli.getjPanel());
+                    framebibi.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                    framebibi.pack();
+                    framebibi.setVisible(true);
+                    framebibi.setVisible(true);
+
                 }else if (Username.equals(Atendente) && Arrays.equals(input,senhaAt)){
                     JOptionPane.showMessageDialog(null,"Senha Correta");
                     System.exit(0);

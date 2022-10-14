@@ -66,4 +66,12 @@
     "sobreNome" : "Jinping",
     "nacionalidade" : "China"
   } ]
+}, {
+  "titulo" : "Comumismo",
+  "codigo" : 9,
+  "listaAutor" : [ {
+    "nome" : "Karl",
+    "sobreNome" : "Marx",
+    "nacionalidade" : "Alemão"
+  } ]
 } ]

@@ -8,7 +8,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class GUIAutor {
-    private JPanel jPanel;
+    protected JPanel jPanel;
     private JTextField TxtNome;
     private JTextField TxtSobrenome;
     private JTextField TxtNacionalidade;

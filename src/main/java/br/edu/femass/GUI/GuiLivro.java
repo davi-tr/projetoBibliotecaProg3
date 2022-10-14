@@ -14,7 +14,7 @@ import java.util.List;
 
 public class GuiLivro {
 
-    private JPanel jPanel;
+    protected JPanel jPanel;
     private JTextField txtNome;
     private JList lstAutores;
     private JButton btnSalvar;

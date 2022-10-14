@@ -56,7 +56,6 @@ public class Emprestimos {
             if (difference_In_Days > 15){
                 long tempodeAtraso
                         = difference_In_Days - 15;
-                System.out.println("Atrasado em " + tempodeAtraso + " Dias");
                 mensagem = "Atrasado em " + tempodeAtraso + " Dias";
             } else mensagem = "Não está atrasado";
         } catch (ParseException e) {
@@ -101,6 +100,10 @@ public class Emprestimos {
                 '}';
     }
 
+    public static void main(String[] args) {
+        Emprestimos emprestimos = new Emprestimos();
+        emprestimos.calculartempo("22-07-2022","02-08-2022");
+    }
 }
 
 
