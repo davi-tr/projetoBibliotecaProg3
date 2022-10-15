@@ -72,10 +72,10 @@ public class Emprestimos {
         this.mensagemDev="Ainda não devolvido";
         this.prev=LocalDateTime.now().plusDays(15);
     }
-
     public String getMensagem() {
         return mensagem;
     }
+
     public Emprestimos(List<Leitor> alunos, LocalDateTime data)  {
         listaLeito.addAll(alunos);
         this.data=LocalDateTime.now();

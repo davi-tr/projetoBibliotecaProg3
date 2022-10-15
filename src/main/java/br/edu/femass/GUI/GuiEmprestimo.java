@@ -64,6 +64,7 @@ public class GuiEmprestimo {
             lstProfessores.setListData(professores.toArray());
             List<Exemplar> exemplares = new DaoExemplar().getAll();
             lstExemplares.setListData(exemplares.toArray());
+
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
