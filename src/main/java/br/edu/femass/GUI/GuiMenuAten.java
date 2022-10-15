@@ -1,6 +1,7 @@
 package br.edu.femass.GUI;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -11,23 +12,28 @@ public class GuiMenuAten {
     private JButton voltarButton;
 
     public GuiMenuAten() {
-        voltarButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-
-            }
-        });
         devolverEmprestimoButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+
 
             }
         });
         realizarEmprestimoButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                GuiEmprestimo guiEmprestimo = new GuiEmprestimo();
+                JFrame frame = new JFrame("Realizar Emprestimo");
+                frame.setContentPane(guiEmprestimo.getjPanel());
+                frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+                frame.pack();
+                frame.setVisible(true);
 
             }
         });
+    }
+
+    public Container getjPanel() {
+        return jPanel;
     }
 }

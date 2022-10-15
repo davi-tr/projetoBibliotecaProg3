@@ -15,6 +15,7 @@ public class Emprestimos {
 
     protected LocalDateTime data;
     protected LocalDateTime devolucao;
+    protected String mensagemDev;
     protected LocalDateTime prev;
     public String mensagem;
 
@@ -28,7 +29,7 @@ public class Emprestimos {
     public void calculartempo(String dataInicio, String dataFim){
         SimpleDateFormat sdf
                 = new SimpleDateFormat(
-                "dd-MM-yyyy");
+                "dd/MM/yyyy");
 
         try {
 
@@ -68,12 +69,22 @@ public class Emprestimos {
     public Emprestimos(List<Leitor> alunos)  {
         listaLeito.addAll(alunos);
         this.data=LocalDateTime.now();
-        this.devolucao=LocalDateTime.now();
+        this.mensagemDev="Ainda não devolvido";
         this.prev=LocalDateTime.now().plusDays(15);
     }
 
     public String getMensagem() {
         return mensagem;
+    }
+    public Emprestimos(List<Leitor> alunos, LocalDateTime data)  {
+        listaLeito.addAll(alunos);
+        this.data=LocalDateTime.now();
+        this.mensagemDev="Devolvido";
+        this.devolucao = data;
+        this.prev=LocalDateTime.now().plusDays(15);
+    }
+    public String getMensagemDev() {
+        return mensagemDev;
     }
 
     public List<Leitor> getListaLeito() {
@@ -100,10 +111,6 @@ public class Emprestimos {
                 '}';
     }
 
-    public static void main(String[] args) {
-        Emprestimos emprestimos = new Emprestimos();
-        emprestimos.calculartempo("22-07-2022","02-08-2022");
-    }
 }
 
 

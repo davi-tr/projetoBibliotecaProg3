@@ -50,12 +50,6 @@ public class GuiMenuBibli extends Frame {
                 frame.setVisible(true);
             }
         });
-        btnVoltar.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                dispose();
-            }
-        });
     }
 
     public JPanel getjPanel() {

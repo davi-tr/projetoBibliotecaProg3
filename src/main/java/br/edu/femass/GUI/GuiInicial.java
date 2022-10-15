@@ -27,14 +27,18 @@ public class GuiInicial {
                 Object Username = cboUser.getSelectedItem();
                 if(Username.equals(Bibliotecario) && Arrays.equals(input,senhaBibl)){
                     GuiMenuBibli guiMenuBibli = new GuiMenuBibli();
-                    JFrame framebibi = new JFrame("Menu Bibliotecario");
-                    framebibi.setContentPane(guiMenuBibli.getjPanel());
-                    framebibi.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-                    framebibi.pack();
-                    framebibi.setVisible(true);
+                    JFrame frame = new JFrame("Menu Bibliotecario");
+                    frame.setContentPane(guiMenuBibli.getjPanel());
+                    frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+                    frame.pack();
+                    frame.setVisible(true);
                 }else if (Username.equals(Atendente) && Arrays.equals(input,senhaAt)){
-                    JOptionPane.showMessageDialog(null,"Senha Correta");
-                    System.exit(0);
+                    GuiMenuAten guiMenuAten = new GuiMenuAten();
+                    JFrame frame = new JFrame("Menu Bibliotecario");
+                    frame.setContentPane(guiMenuAten.getjPanel());
+                    frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+                    frame.pack();
+                    frame.setVisible(true);
                 }else{
                     JOptionPane.showMessageDialog(null,"Senha ou Usuario Incorreto");
                 }
@@ -50,13 +54,12 @@ public class GuiInicial {
     }
     public void run(){
         GuiInicial guiInicial = new GuiInicial();
+        GuiEmprestimo guiEmprestimo = new GuiEmprestimo();
         JFrame frame = new JFrame("Sistema Bibliotecario");
         frame.setContentPane(guiInicial.getjPanel());
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
-        guiInicial.getDispo();
-
     }
 
 //    public static void main(String[] args) {

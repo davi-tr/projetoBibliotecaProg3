@@ -74,4 +74,12 @@
     "sobreNome" : "Marx",
     "nacionalidade" : "Alemão"
   } ]
+}, {
+  "titulo" : "Sei lá Bixo",
+  "codigo" : 10,
+  "listaAutor" : [ {
+    "nome" : "Frederich",
+    "sobreNome" : "Engels",
+    "nacionalidade" : "Alemão"
+  } ]
 } ]

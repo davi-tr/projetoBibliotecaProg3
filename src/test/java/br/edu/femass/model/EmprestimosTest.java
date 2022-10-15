@@ -15,8 +15,8 @@ class EmprestimosTest {
     @Test
     void calculartempo() {
         Emprestimos emprestimos = new Emprestimos();
-        String dataInicio = "22-07-2022";
-        String dataFim = "21-08-2022";
+        String dataInicio = "22/07/2022";
+        String dataFim = "21/08/2022";
         emprestimos.calculartempo(dataInicio, dataFim);
         String expected = "Atrasado em 15 Dias";
         Assertions.assertEquals(expected, emprestimos.getMensagem());
