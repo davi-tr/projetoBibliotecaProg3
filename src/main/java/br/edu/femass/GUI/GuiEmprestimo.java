@@ -19,6 +19,7 @@ public class GuiEmprestimo {
     private JButton salvarButton;
     private JList lstAlunos;
     private JList lstProfessores;
+    private JComboBox cboExemplares;
     private JComboBox cboLeitores;
     List<Leitor> leitor = new ArrayList();
 
@@ -29,7 +30,7 @@ public class GuiEmprestimo {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try{
-                    Emprestimos emprestimos = new Emprestimos(lstProfessores.getSelectedValuesList());
+                    Emprestimos emprestimos = new Emprestimos(cboExemplares.getSelectedItem(),lstProfessores.getSelectedValuesList());
                     updateCombo();
                     updateList();
                     try {
@@ -48,8 +49,10 @@ public class GuiEmprestimo {
 
     private void updateCombo() {
         try {
-            List<Aluno> aluno = new DaoAluno().getAll();
-            lstAlunos.setListData(aluno.toArray());
+            List<Exemplar> exemplares = new DaoExemplar().getAll();
+            for(Exemplar exemplar: exemplares ){
+                cboExemplares.addItem(exemplar);
+            }
         }catch (Exception e){
             throw new RuntimeException(e);
         }
@@ -62,8 +65,6 @@ public class GuiEmprestimo {
             List<Professor> professores = new DaoProfessor().getAll();
             lstAlunos.setListData(alunos.toArray());
             lstProfessores.setListData(professores.toArray());
-            List<Exemplar> exemplares = new DaoExemplar().getAll();
-            lstExemplares.setListData(exemplares.toArray());
 
         } catch (Exception e) {
             throw new RuntimeException(e);

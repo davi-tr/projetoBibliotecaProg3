@@ -5,9 +5,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 public class Emprestimos {
@@ -24,6 +22,7 @@ public class Emprestimos {
     }
     @JsonFormat(with = JsonFormat.Feature.ACCEPT_SINGLE_VALUE_AS_ARRAY)
     List<Leitor> listaLeito = new ArrayList();
+    List<Object> listaExemplar = new ArrayList<>();
 
 
     public void calculartempo(String dataInicio, String dataFim){
@@ -65,9 +64,13 @@ public class Emprestimos {
 
     }
 
+    public List<Object> getListaExemplar() {
+        return listaExemplar;
+    }
 
-    public Emprestimos(List<Leitor> alunos)  {
+    public Emprestimos(Object exemplar, List<Leitor> alunos)  {
         listaLeito.addAll(alunos);
+        listaExemplar.addAll(Collections.singleton(exemplar));
         this.data=LocalDateTime.now();
         this.mensagemDev="Ainda não devolvido";
         this.prev=LocalDateTime.now().plusDays(15);
