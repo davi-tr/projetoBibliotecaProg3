@@ -89,6 +89,6 @@ public class Exemplar {
 
     @Override
     public String toString() {
-        return (this.codigo+" "+this.listaLivro);
+        return (this.codigo+" "+this.listaLivro.toString());
     }
 }

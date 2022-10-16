@@ -1,8 +1,8 @@
 [ {
-  "data" : [ 2022, 10, 15, 14, 26, 5, 995177100 ],
+  "data" : [ 2022, 10, 16, 3, 13, 12, 452702100 ],
   "devolucao" : null,
   "mensagemDev" : "Ainda não devolvido",
-  "prev" : [ 2022, 10, 30, 14, 26, 5, 995177100 ],
+  "prev" : [ 2022, 11, 15, 3, 13, 12, 452702100 ],
   "mensagem" : null,
   "listaLeito" : [ {
     "codigo" : 6,
@@ -13,23 +13,5 @@
     "disciplina" : "Banco de Dados",
     "nomeClasse" : "Professor"
   } ],
-  "listaExemplar" : [ {
-    "codigo" : 1,
-    "dataAq" : [ 2022, 10, 10, 20, 38, 54, 98049000 ],
-    "quantidade" : 2,
-    "disponivel" : true,
-    "listaLivro" : [ {
-      "titulo" : "Das Capital",
-      "codigo" : 5,
-      "listaAutor" : [ {
-        "nome" : "Karl",
-        "sobreNome" : "Marx",
-        "nacionalidade" : "Alemão"
-      }, {
-        "nome" : "Frederich",
-        "sobreNome" : "Engels",
-        "nacionalidade" : "Alemão"
-      } ]
-    } ]
-  } ]
+  "listaExemplar" : [ "2 [Saci 7 [Xi Jinping China]]" ]
 } ]

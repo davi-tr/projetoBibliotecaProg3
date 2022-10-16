@@ -1,10 +1,14 @@
 package br.edu.femass.model;
 
+import br.edu.femass.dao.DaoAluno;
+import br.edu.femass.dao.DaoEmprestimo;
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 import java.util.concurrent.TimeUnit;
 
@@ -16,6 +20,10 @@ public class Emprestimos {
     protected String mensagemDev;
     protected LocalDateTime prev;
     public String mensagem;
+    @JsonIgnore
+    public String nome;
+    @JsonIgnore
+    public String nomeExemplar;
 
     public Emprestimos(){
 
@@ -68,23 +76,39 @@ public class Emprestimos {
         return listaExemplar;
     }
 
-    public Emprestimos(Object exemplar, List<Leitor> alunos)  {
+    public Emprestimos(String exemplar, List<Leitor> alunos)  {
         listaLeito.addAll(alunos);
+        try{
+            for(Leitor l : alunos){
+                this.prev=LocalDateTime.now().plusDays(l.getPrazoMaximoDevolucao());
+            }
+        }catch (Exception e){
+            throw new RuntimeException(e);
+        }
         listaExemplar.addAll(Collections.singleton(exemplar));
         this.data=LocalDateTime.now();
         this.mensagemDev="Ainda não devolvido";
-        this.prev=LocalDateTime.now().plusDays(15);
     }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public String getNomeExemplar() {
+        return nomeExemplar;
+    }
+
     public String getMensagem() {
         return mensagem;
     }
 
-    public Emprestimos(List<Leitor> alunos, LocalDateTime data)  {
+    public Emprestimos(List<Leitor> alunos, String data)  {
         listaLeito.addAll(alunos);
         this.data=LocalDateTime.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ISO_DATE_TIME;
+        this.devolucao = LocalDateTime.parse(data,formatter);
         this.mensagemDev="Devolvido";
-        this.devolucao = data;
-        this.prev=LocalDateTime.now().plusDays(15);
+
     }
     public String getMensagemDev() {
         return mensagemDev;
@@ -94,6 +118,9 @@ public class Emprestimos {
         return listaLeito;
     }
 
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
 
     public LocalDateTime getPrev() {
         return prev;
@@ -109,11 +136,31 @@ public class Emprestimos {
 
     @Override
     public String toString() {
-        return "Emprestimos{" +
-                "data=" + data +
-                '}';
+        try {
+            for (Leitor l : listaLeito){
+                nome = l.getNome();
+            }
+
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+
+        try {
+            for (Object ex : listaExemplar){
+                nomeExemplar = String.valueOf(ex);
+            }
+
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+        return nome+" "+nomeExemplar;
     }
 
+    //    public static void main(String[] args) {
+//        String str = "2016-03-04 11:30";
+//        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
+//        Emprestimos emprestimos =  new Emprestimos(LocalDateTime.parse(str,formatter));
+//    }
 }
 
 

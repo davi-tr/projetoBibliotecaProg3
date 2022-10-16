@@ -37,7 +37,7 @@ public class GuiEmprestimo {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try{
-                    Emprestimos emprestimos = new Emprestimos(cboExemplares.getSelectedItem(),lstAlunos.getSelectedValuesList());
+                    Emprestimos emprestimos = new Emprestimos(cboExemplares.getSelectedItem().toString(),lstAlunos.getSelectedValuesList());
                     try {
                         new DaoEmprestimo().save(emprestimos);
                     }catch (ParseException p){
