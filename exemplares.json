@@ -44,4 +44,18 @@
       "nacionalidade" : "Alemão"
     } ]
   } ]
+}, {
+  "codigo" : 4,
+  "dataAq" : [ 2022, 10, 16, 0, 10, 45, 150473600 ],
+  "quantidade" : 3,
+  "disponivel" : true,
+  "listaLivro" : [ {
+    "titulo" : "Diario de Anne Frank",
+    "codigo" : 11,
+    "listaAutor" : [ {
+      "nome" : "Anne",
+      "sobreNome" : "Frank",
+      "nacionalidade" : "Alemanha"
+    } ]
+  } ]
 } ]
