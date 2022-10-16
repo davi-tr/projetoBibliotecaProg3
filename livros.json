@@ -82,4 +82,12 @@
     "sobreNome" : "Engels",
     "nacionalidade" : "Alemão"
   } ]
+}, {
+  "titulo" : "Diario de Anne Frank",
+  "codigo" : 11,
+  "listaAutor" : [ {
+    "nome" : "Anne",
+    "sobreNome" : "Frank",
+    "nacionalidade" : "Alemanha"
+  } ]
 } ]
