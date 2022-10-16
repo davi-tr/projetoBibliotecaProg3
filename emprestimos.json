@@ -1,92 +1,17 @@
 [ {
-  "data" : [ 2022, 10, 16, 3, 13, 12, 452702100 ],
+  "data" : [ 2022, 10, 16, 17, 31, 45, 990931700 ],
   "devolucao" : null,
   "mensagemDev" : "Ainda não devolvido",
-  "prev" : [ 2022, 11, 15, 3, 13, 12, 452702100 ],
+  "prev" : [ 2022, 11, 15, 17, 31, 45, 990931700 ],
   "mensagem" : null,
   "listaLeito" : [ {
     "codigo" : 6,
     "nome" : "Natassja",
     "endereco" : "Visconde",
     "telefone" : "2227430190",
-    "prazoMaximoDevolucao" : 30
+    "prazoMaximoDevolucao" : 30,
+    "disciplina" : "Banco de Dados",
+    "nomeClasse" : "Professor"
   } ],
-<<<<<<< HEAD
-  "listaExemplar" : [ "2 [Saci 7 [Xi Jinping China]]" ]
-=======
-  "listaExemplar" : [ {
-    "codigo" : 1,
-    "dataAq" : [ 2022, 10, 10, 20, 38, 54, 98049000 ],
-    "quantidade" : 2,
-    "disponivel" : true,
-    "listaLivro" : [ {
-      "titulo" : "Das Capital",
-      "codigo" : 5,
-      "listaAutor" : [ {
-        "nome" : "Karl",
-        "sobreNome" : "Marx",
-        "nacionalidade" : "Alemão"
-      }, {
-        "nome" : "Frederich",
-        "sobreNome" : "Engels",
-        "nacionalidade" : "Alemão"
-      } ]
-    } ]
-  } ]
-}, {
-  "data" : [ 2022, 10, 15, 16, 53, 46, 746807700 ],
-  "devolucao" : null,
-  "mensagemDev" : "Ainda não devolvido",
-  "prev" : [ 2022, 10, 30, 16, 53, 46, 746807700 ],
-  "mensagem" : null,
-  "listaLeito" : [ ],
-  "listaExemplar" : [ {
-    "codigo" : 1,
-    "dataAq" : [ 2022, 10, 10, 20, 38, 54, 98049000 ],
-    "quantidade" : 2,
-    "disponivel" : true,
-    "listaLivro" : [ {
-      "titulo" : "Das Capital",
-      "codigo" : 5,
-      "listaAutor" : [ {
-        "nome" : "Karl",
-        "sobreNome" : "Marx",
-        "nacionalidade" : "Alemão"
-      }, {
-        "nome" : "Frederich",
-        "sobreNome" : "Engels",
-        "nacionalidade" : "Alemão"
-      } ]
-    } ]
-  } ]
-}, {
-  "data" : [ 2022, 10, 16, 0, 11, 15, 308366700 ],
-  "devolucao" : null,
-  "mensagemDev" : "Ainda não devolvido",
-  "prev" : [ 2022, 10, 31, 0, 11, 15, 308366700 ],
-  "mensagem" : null,
-  "listaLeito" : [ {
-    "codigo" : 1,
-    "nome" : "Davi",
-    "endereco" : "Rua 3",
-    "telefone" : "22111111",
-    "prazoMaximoDevolucao" : 15,
-    "nomeClasse" : "Aluno"
-  } ],
-  "listaExemplar" : [ {
-    "codigo" : 4,
-    "dataAq" : [ 2022, 10, 16, 0, 10, 45, 150473600 ],
-    "quantidade" : 3,
-    "disponivel" : true,
-    "listaLivro" : [ {
-      "titulo" : "Diario de Anne Frank",
-      "codigo" : 11,
-      "listaAutor" : [ {
-        "nome" : "Anne",
-        "sobreNome" : "Frank",
-        "nacionalidade" : "Alemanha"
-      } ]
-    } ]
-  } ]
->>>>>>> 5f6a8afa5d28ab5645c1466b577df59b7cf3ed0a
+  "listaExemplar" : [ "1 [Das Capital 5 [Karl Marx Alemão, Frederich Engels Alemão]]" ]
 } ]

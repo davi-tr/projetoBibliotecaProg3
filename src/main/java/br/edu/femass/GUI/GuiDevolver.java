@@ -22,8 +22,7 @@ public class GuiDevolver {
             @Override
             public void itemStateChanged(ItemEvent e) {
 
-            }
-        });
+            }        });
         btnDevolver.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
