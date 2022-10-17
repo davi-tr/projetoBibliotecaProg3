@@ -90,4 +90,12 @@
     "sobreNome" : "Frank",
     "nacionalidade" : "Alemanha"
   } ]
+}, {
+  "titulo" : "Teste",
+  "codigo" : 12,
+  "listaAutor" : [ {
+    "nome" : "Karl",
+    "sobreNome" : "Marx",
+    "nacionalidade" : "Alemão"
+  } ]
 } ]

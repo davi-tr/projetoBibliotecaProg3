@@ -18,6 +18,8 @@ public class GuiLivro {
     private JTextField txtNome;
     private JList lstAutores;
     private JButton btnSalvar;
+    private JScrollPane scrollPane;
+
     public GuiLivro() {
         updateList();
         btnSalvar.addActionListener(new ActionListener() {
@@ -44,6 +46,7 @@ public class GuiLivro {
         try {
             List<Autor> autores = new DaoAutor().getAll();
             lstAutores.setListData(autores.toArray());
+            scrollPane.setViewportView(lstAutores);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }

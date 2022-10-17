@@ -63,6 +63,6 @@ public class Livro {
 
     @Override
     public String toString() {
-        return (this.titulo+" "+this.codigo+" "+this.listaAutor);
+        return (this.titulo);
     }
 }
