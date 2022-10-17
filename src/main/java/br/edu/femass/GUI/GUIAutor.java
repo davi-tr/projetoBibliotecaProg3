@@ -23,7 +23,7 @@ public class GUIAutor {
                     new DaoAutor().save(autor);
                     JOptionPane.showMessageDialog(null, "Autor salvo\n"+TxtNome.getText()+" "
                             +TxtSobrenome.getText()+
-                            "\n                   "
+                            "\n "
                             +TxtNacionalidade.getText());
                 } catch (Exception ex){
                     JOptionPane.showMessageDialog(null, ex.getMessage());

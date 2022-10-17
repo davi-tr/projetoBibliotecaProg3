@@ -26,11 +26,11 @@ public class DaoEmprestimo extends Persistencia<Emprestimos> implements Dao<Empr
     }
 
     public void updateDao(Emprestimos emprestimoatualizado) throws Exception{
-        List<Emprestimos> emprestimos = getAll();
+        List<Emprestimos> emprestados = getAll();
         List<Emprestimos> emprestimosAtualizado = new ArrayList<>();
 
-        for(Emprestimos emprestimo : emprestimos){
-            if(emprestimo.getNome() == emprestimoatualizado.getNome()) {
+        for(Emprestimos emprestimo : emprestados){
+            if(emprestimo.getCodigo() == emprestimoatualizado.getCodigo()) {
                 emprestimo.setDevolucao(emprestimoatualizado.getDevolucao());
             }
                 emprestimosAtualizado.add(emprestimo);

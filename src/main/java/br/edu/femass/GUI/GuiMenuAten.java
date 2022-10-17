@@ -20,6 +20,7 @@ public class GuiMenuAten {
                 frame.setContentPane(guiDevolver.getjPanel());
                 frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
                 frame.pack();
+                frame.setLocationRelativeTo(null);
                 frame.setVisible(true);
             }
         });
@@ -31,6 +32,7 @@ public class GuiMenuAten {
                 frame.setContentPane(guiEmprestimo.getjPanel());
                 frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
                 frame.pack();
+                frame.setLocationRelativeTo(null);
                 frame.setVisible(true);
 
             }

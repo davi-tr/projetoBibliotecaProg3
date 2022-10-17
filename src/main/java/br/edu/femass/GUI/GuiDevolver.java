@@ -10,6 +10,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
 import java.text.ParseException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class GuiDevolver {
@@ -31,10 +32,14 @@ public class GuiDevolver {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    Emprestimos emprestimosatualizado = new Emprestimos(lstEmprestimos.getSelectedValuesList(), txtData.getText());
-                    new DaoEmprestimo().updateDao(emprestimosatualizado);
-                } catch (Exception ex){
-                   throw new RuntimeException(ex);
+                    Emprestimos emprestimos = new Emprestimos(lstEmprestimos.getSelectedValuesList(),txtData.getText());
+                    try {
+                        new DaoEmprestimo().updateDao(emprestimos);
+                    } catch (Exception ex) {
+                        throw new RuntimeException(ex);
+                    }
+                } catch (Exception exls){
+                    throw new RuntimeException(exls);
                 }
             }
         });

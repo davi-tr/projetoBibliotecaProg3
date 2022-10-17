@@ -25,6 +25,7 @@ public class GuiMenuBibli extends Frame {
                 frame.setContentPane(guiLivro.jPanel);
                 frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
                 frame.pack();
+                frame.setLocationRelativeTo(null);
                 frame.setVisible(true);
             }
         });
@@ -36,6 +37,7 @@ public class GuiMenuBibli extends Frame {
                 frame.setContentPane(guiAutor.jPanel);
                 frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
                 frame.pack();
+                frame.setLocationRelativeTo(null);
                 frame.setVisible(true);
             }
         });

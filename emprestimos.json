@@ -1,8 +1,8 @@
 [ {
-  "data" : [ 2022, 10, 16 ],
-  "devolucao" : [ 2022, 12, 12 ],
-  "mensagemDev" : "Devolvido",
-  "prev" : [ 2022, 10, 31 ],
+  "data" : [ 2022, 10, 17 ],
+  "devolucao" : null,
+  "mensagemDev" : "Ainda não devolvido",
+  "prev" : [ 2022, 11, 1 ],
   "mensagem" : null,
   "codigo" : 4,
   "listaLeito" : [ {
@@ -11,6 +11,36 @@
     "endereco" : "Rua P",
     "telefone" : "novo",
     "prazoMaximoDevolucao" : 15
+  } ],
+  "listaExemplar" : [ {
+    "codigo" : 4,
+    "dataAq" : [ 2022, 10, 16, 0, 10, 45, 150473600 ],
+    "quantidade" : 3,
+    "nome" : "Diario de Anne Frank",
+    "disponivel" : true,
+    "listaLivro" : [ {
+      "titulo" : "Diario de Anne Frank",
+      "codigo" : 11,
+      "listaAutor" : [ {
+        "nome" : "Anne",
+        "sobreNome" : "Frank",
+        "nacionalidade" : "Alemanha"
+      } ]
+    } ]
+  } ]
+}, {
+  "data" : [ 2022, 10, 17 ],
+  "devolucao" : [ 2024, 3, 12 ],
+  "mensagemDev" : "Devolvido",
+  "prev" : [ 2022, 11, 16 ],
+  "mensagem" : null,
+  "codigo" : 6,
+  "listaLeito" : [ {
+    "codigo" : 6,
+    "nome" : "Natassja",
+    "endereco" : "Visconde",
+    "telefone" : "2227430190",
+    "prazoMaximoDevolucao" : 30
   } ],
   "listaExemplar" : [ {
     "codigo" : 3,
@@ -25,36 +55,6 @@
         "nome" : "Karl",
         "sobreNome" : "Marx",
         "nacionalidade" : "Alemão"
-      } ]
-    } ]
-  } ]
-}, {
-  "data" : [ 2022, 10, 16 ],
-  "devolucao" : [ 2022, 12, 12 ],
-  "mensagemDev" : "Devolvido",
-  "prev" : [ 2022, 11, 15 ],
-  "mensagem" : null,
-  "codigo" : 6,
-  "listaLeito" : [ {
-    "codigo" : 6,
-    "nome" : "Natassja",
-    "endereco" : "Visconde",
-    "telefone" : "2227430190",
-    "prazoMaximoDevolucao" : 30
-  } ],
-  "listaExemplar" : [ {
-    "codigo" : 2,
-    "dataAq" : [ 2022, 10, 10, 20, 39, 1, 471812000 ],
-    "quantidade" : 3,
-    "nome" : "Saci",
-    "disponivel" : true,
-    "listaLivro" : [ {
-      "titulo" : "Saci",
-      "codigo" : 7,
-      "listaAutor" : [ {
-        "nome" : "Xi",
-        "sobreNome" : "Jinping",
-        "nacionalidade" : "China"
       } ]
     } ]
   } ]

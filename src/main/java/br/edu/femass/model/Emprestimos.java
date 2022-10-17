@@ -112,6 +112,13 @@ public class Emprestimos {
         listaEmprestimo.addAll(emprestimos);
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         this.devolucao = LocalDate.parse(data, formatter);
+        try{
+            for(Emprestimos em : listaEmprestimo){
+                setCodigo(em.getCodigo());
+            }
+        }catch (Exception e){
+            throw new RuntimeException(e);
+        }
 
     }
     public String getMensagemDev() {
@@ -137,6 +144,7 @@ public class Emprestimos {
     public LocalDate getData() {
         return data;
     }
+
     public Long getCodigo() {
         return codigo;
     }
@@ -163,7 +171,7 @@ public class Emprestimos {
             } catch (Exception e) {
             throw new RuntimeException(e);
         }
-        return nomeExemplar + " Emprestado à  " + "|"+nome+"|";
+        return nomeExemplar + " Emprestado à  " + "|"+nome+"|" + "|" + codigo;
     }
 
     public void setDevolucao(LocalDate devolucao) {

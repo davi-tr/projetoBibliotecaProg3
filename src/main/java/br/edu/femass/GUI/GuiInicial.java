@@ -1,6 +1,7 @@
 package br.edu.femass.GUI;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Arrays;
@@ -31,6 +32,7 @@ public class GuiInicial {
                     frame.setContentPane(guiMenuBibli.getjPanel());
                     frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
                     frame.pack();
+                    frame.setLocationRelativeTo(null);
                     frame.setVisible(true);
                 }else if (Username.equals(Atendente) && Arrays.equals(input,senhaAt)){
                     GuiMenuAten guiMenuAten = new GuiMenuAten();
@@ -38,6 +40,7 @@ public class GuiInicial {
                     frame.setContentPane(guiMenuAten.getjPanel());
                     frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
                     frame.pack();
+                    frame.setLocationRelativeTo(null);
                     frame.setVisible(true);
                 }else{
                     JOptionPane.showMessageDialog(null,"Senha ou Usuario Incorreto");
@@ -59,6 +62,7 @@ public class GuiInicial {
         frame.setContentPane(guiInicial.getjPanel());
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
+        frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }
 
