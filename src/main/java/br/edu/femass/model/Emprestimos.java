@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
@@ -15,22 +16,26 @@ import java.util.concurrent.TimeUnit;
 public class Emprestimos {
 
 
-    protected LocalDateTime data;
-    protected LocalDateTime devolucao;
+    protected LocalDate data;
+    protected LocalDate devolucao;
     protected String mensagemDev;
-    protected LocalDateTime prev;
+    protected LocalDate prev;
     public String mensagem;
     @JsonIgnore
     public String nome;
     @JsonIgnore
     public String nomeExemplar;
 
+
+    public Long codigo;
+
     public Emprestimos(){
 
     }
     @JsonFormat(with = JsonFormat.Feature.ACCEPT_SINGLE_VALUE_AS_ARRAY)
     List<Leitor> listaLeito = new ArrayList();
-    List<Object> listaExemplar = new ArrayList<>();
+    List<Exemplar> listaExemplar = new ArrayList<>();
+    List<Emprestimos> listaEmprestimo = new ArrayList<>();
 
 
     public void calculartempo(String dataInicio, String dataFim){
@@ -72,21 +77,22 @@ public class Emprestimos {
 
     }
 
-    public List<Object> getListaExemplar() {
+    public List<Exemplar> getListaExemplar() {
         return listaExemplar;
     }
 
-    public Emprestimos(String exemplar, List<Leitor> alunos)  {
+    public Emprestimos(List<Exemplar> exemplar, List<Leitor> alunos)  {
         listaLeito.addAll(alunos);
         try{
             for(Leitor l : alunos){
-                this.prev=LocalDateTime.now().plusDays(l.getPrazoMaximoDevolucao());
+                this.prev=LocalDate.now().plusDays(l.getPrazoMaximoDevolucao());
+                setCodigo(l.getCodigo());
             }
         }catch (Exception e){
             throw new RuntimeException(e);
         }
-        listaExemplar.addAll(Collections.singleton(exemplar));
-        this.data=LocalDateTime.now();
+        listaExemplar.addAll(exemplar);
+        this.data=LocalDate.now();
         this.mensagemDev="Ainda não devolvido";
     }
 
@@ -102,12 +108,10 @@ public class Emprestimos {
         return mensagem;
     }
 
-    public Emprestimos(List<Leitor> alunos, String data)  {
-        listaLeito.addAll(alunos);
-        this.data=LocalDateTime.now();
-        DateTimeFormatter formatter = DateTimeFormatter.ISO_DATE_TIME;
-        this.devolucao = LocalDateTime.parse(data,formatter);
-        this.mensagemDev="Devolvido";
+    public Emprestimos(List<Emprestimos> emprestimos,String data)  {
+        listaEmprestimo.addAll(emprestimos);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        this.devolucao = LocalDate.parse(data, formatter);
 
     }
     public String getMensagemDev() {
@@ -122,16 +126,23 @@ public class Emprestimos {
         this.nome = nome;
     }
 
-    public LocalDateTime getPrev() {
+    public LocalDate getPrev() {
         return prev;
     }
 
-    public LocalDateTime getDevolucao() {
+    public LocalDate getDevolucao() {
         return devolucao;
     }
 
-    public LocalDateTime getData() {
+    public LocalDate getData() {
         return data;
+    }
+    public Long getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(Long codigo) {
+        this.codigo = codigo;
     }
 
     @Override
@@ -146,15 +157,25 @@ public class Emprestimos {
         }
 
         try {
-            for (Object ex : listaExemplar){
-                nomeExemplar = String.valueOf(ex);
+            for (Exemplar ex : listaExemplar){
+                nomeExemplar = ex.getNome();
             }
-
-        } catch (Exception e) {
+            } catch (Exception e) {
             throw new RuntimeException(e);
         }
-        return nome+" "+nomeExemplar;
+        return nomeExemplar + " Emprestado à  " + "|"+nome+"|";
     }
+
+    public void setDevolucao(LocalDate devolucao) {
+        this.devolucao = devolucao;
+        this.mensagemDev="Devolvido";
+    }
+
+//    public static void main(String[] args) {
+//        Emprestimos emprestimos = new Emprestimos();
+//        emprestimos.setDevolução(LocalDateTime.of(2022,12,31,12,30));
+//        System.out.println(emprestimos.getDevolucao());
+//    }
 
     //    public static void main(String[] args) {
 //        String str = "2016-03-04 11:30";

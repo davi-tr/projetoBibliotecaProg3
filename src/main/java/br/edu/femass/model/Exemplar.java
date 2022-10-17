@@ -22,6 +22,9 @@ public class Exemplar {
     protected Integer quantidade;
 
 
+    protected String nome;
+
+
     protected Boolean disponivel;
 
     List<Livro> listaLivro = new ArrayList();
@@ -41,6 +44,13 @@ public class Exemplar {
         this.codigo = proximoNumero++;
         atualizarID();
         this.dataAq = LocalDateTime.now();
+        try{
+            for(Livro l : listaLivro){
+                setNome(l.titulo);
+            }
+        }catch (Exception ex){
+            throw new RuntimeException(ex);
+        }
     }
 
 
@@ -73,6 +83,21 @@ public class Exemplar {
     }
     public Long getCodigo() {
         return codigo;
+    }
+
+    public String getNome() {
+        try{
+            for(Livro l : listaLivro){
+                setNome(l.titulo);
+            }
+        }catch (Exception ex){
+            throw new RuntimeException(ex);
+        }
+        return nome;
+    }
+
+    private void setNome(String titulo) {
+        this.nome = titulo;
     }
 
     public void setCodigo(Long codigo) {

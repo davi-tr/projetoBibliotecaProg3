@@ -24,6 +24,7 @@ public class GuiEmprestimo {
     private JComboBox cboExemplares;
     private JComboBox cboSeletor;
     private JLabel txtTitulo;
+    private JList lstExemplar;
     private JComboBox cboLeitores;
     private Object professor = "Professor";
     private Object aluno = "Aluno";
@@ -31,13 +32,12 @@ public class GuiEmprestimo {
 
     public GuiEmprestimo() {
         updateList();
-        updateCombo();
         valores();
         salvarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try{
-                    Emprestimos emprestimos = new Emprestimos(cboExemplares.getSelectedItem().toString(),lstAlunos.getSelectedValuesList());
+                    Emprestimos emprestimos = new Emprestimos(lstExemplar.getSelectedValuesList(),lstAlunos.getSelectedValuesList());
                     try {
                         new DaoEmprestimo().save(emprestimos);
                     }catch (ParseException p){
@@ -76,18 +76,6 @@ public class GuiEmprestimo {
             }
         });
     }
-    
-
-    private void updateCombo() {
-        try {
-            List<Exemplar> exemplares = new DaoExemplar().getAll();
-            for(Exemplar exemplar: exemplares ){
-                cboExemplares.addItem(exemplar);
-            }
-        }catch (Exception e){
-            throw new RuntimeException(e);
-        }
-    }
 
 private void valores(){
         cboSeletor.addItem(aluno);
@@ -98,6 +86,8 @@ private void valores(){
             List<Aluno> alunos = new DaoAluno().getAll();
             List<Professor> professores = new DaoProfessor().getAll();
             lstAlunos.setListData(alunos.toArray());
+            List<Exemplar> exemplar = new DaoExemplar().getAll();
+            lstExemplar.setListData(exemplar.toArray());
 
         } catch (Exception e) {
             throw new RuntimeException(e);

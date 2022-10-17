@@ -15,8 +15,12 @@ public class GuiMenuAten {
         devolverEmprestimoButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
-
+                GuiDevolver guiDevolver = new GuiDevolver();
+                JFrame frame = new JFrame("Menu Bibliotecario");
+                frame.setContentPane(guiDevolver.getjPanel());
+                frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+                frame.pack();
+                frame.setVisible(true);
             }
         });
         realizarEmprestimoButton.addActionListener(new ActionListener() {

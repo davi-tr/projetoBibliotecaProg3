@@ -4,10 +4,12 @@ import br.edu.femass.dao.DaoEmprestimo;
 import br.edu.femass.model.Emprestimos;
 
 import javax.swing.*;
+import javax.swing.text.MaskFormatter;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
+import java.text.ParseException;
 import java.util.List;
 
 public class GuiDevolver {
@@ -15,38 +17,38 @@ public class GuiDevolver {
     private JComboBox cboEmprestimos;
     private JTextField txtData;
     private JButton btnDevolver;
+    private JList lstEmprestimos;
 
     public GuiDevolver() {
-        updateCombo();
-        cboEmprestimos.addItemListener(new ItemListener() {
-            @Override
-            public void itemStateChanged(ItemEvent e) {
-
-            }        });
+        updateList();
+        try{
+            MaskFormatter mascara = new MaskFormatter("##/##/####");
+            mascara.install((JFormattedTextField) txtData);
+        }catch (ParseException e){
+            throw new RuntimeException(e);
+        }
         btnDevolver.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                try {
+                    Emprestimos emprestimosatualizado = new Emprestimos(lstEmprestimos.getSelectedValuesList(), txtData.getText());
+                    new DaoEmprestimo().updateDao(emprestimosatualizado);
+                } catch (Exception ex){
+                   throw new RuntimeException(ex);
+                }
             }
         });
     }
-    private void updateCombo(){
-        try {
+    private void updateList(){
+        try{
             List<Emprestimos> emprestimos = new DaoEmprestimo().getAll();
-            for (Emprestimos emprestimo : emprestimos) {
-                cboEmprestimos.addItem(emprestimo.toString());
-            }
-        }catch (Exception e){
+            lstEmprestimos.setListData(emprestimos.toArray());
+        } catch (Exception e){
             throw new RuntimeException(e);
         }
     }
 
-    public static void main(String[] args) {
-        GuiDevolver guiDevolver = new GuiDevolver();
-        JFrame frame = new JFrame("Menu Bibliotecario");
-        frame.setContentPane(guiDevolver.jPanel);
-        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        frame.pack();
-        frame.setVisible(true);
+    public JPanel getjPanel() {
+        return jPanel;
     }
 }

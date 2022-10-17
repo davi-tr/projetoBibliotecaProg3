@@ -7,7 +7,9 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 public class DaoEmprestimo extends Persistencia<Emprestimos> implements Dao<Emprestimos> {
@@ -17,6 +19,25 @@ public class DaoEmprestimo extends Persistencia<Emprestimos> implements Dao<Empr
         List<Emprestimos> emprestados = getAll();
         emprestados.add(emprestimos);
         String json = getObjectmapper().writerWithDefaultPrettyPrinter().writeValueAsString(emprestados);
+
+        FileOutputStream out = new FileOutputStream(NOMEARQUIVO);
+        out.write(json.getBytes());
+        out.close();
+    }
+
+    public void updateDao(Emprestimos emprestimoatualizado) throws Exception{
+        List<Emprestimos> emprestimos = getAll();
+        List<Emprestimos> emprestimosAtualizado = new ArrayList<>();
+
+        for(Emprestimos emprestimo : emprestimos){
+            if(emprestimo.getNome() == emprestimoatualizado.getNome()) {
+                emprestimo.setDevolucao(emprestimoatualizado.getDevolucao());
+            }
+                emprestimosAtualizado.add(emprestimo);
+
+        }
+
+        String json = getObjectmapper().writerWithDefaultPrettyPrinter().writeValueAsString(emprestimosAtualizado);
 
         FileOutputStream out = new FileOutputStream(NOMEARQUIVO);
         out.write(json.getBytes());

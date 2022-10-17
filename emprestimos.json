@@ -1,17 +1,61 @@
 [ {
-  "data" : [ 2022, 10, 16, 17, 31, 45, 990931700 ],
-  "devolucao" : null,
-  "mensagemDev" : "Ainda não devolvido",
-  "prev" : [ 2022, 11, 15, 17, 31, 45, 990931700 ],
+  "data" : [ 2022, 10, 16 ],
+  "devolucao" : [ 2022, 12, 12 ],
+  "mensagemDev" : "Devolvido",
+  "prev" : [ 2022, 10, 31 ],
   "mensagem" : null,
+  "codigo" : 4,
+  "listaLeito" : [ {
+    "codigo" : 4,
+    "nome" : "Carlos",
+    "endereco" : "Rua P",
+    "telefone" : "novo",
+    "prazoMaximoDevolucao" : 15
+  } ],
+  "listaExemplar" : [ {
+    "codigo" : 3,
+    "dataAq" : [ 2022, 10, 14, 2, 57, 55, 791792700 ],
+    "quantidade" : 2,
+    "nome" : "Comumismo",
+    "disponivel" : true,
+    "listaLivro" : [ {
+      "titulo" : "Comumismo",
+      "codigo" : 9,
+      "listaAutor" : [ {
+        "nome" : "Karl",
+        "sobreNome" : "Marx",
+        "nacionalidade" : "Alemão"
+      } ]
+    } ]
+  } ]
+}, {
+  "data" : [ 2022, 10, 16 ],
+  "devolucao" : [ 2022, 12, 12 ],
+  "mensagemDev" : "Devolvido",
+  "prev" : [ 2022, 11, 15 ],
+  "mensagem" : null,
+  "codigo" : 6,
   "listaLeito" : [ {
     "codigo" : 6,
     "nome" : "Natassja",
     "endereco" : "Visconde",
     "telefone" : "2227430190",
-    "prazoMaximoDevolucao" : 30,
-    "disciplina" : "Banco de Dados",
-    "nomeClasse" : "Professor"
+    "prazoMaximoDevolucao" : 30
   } ],
-  "listaExemplar" : [ "1 [Das Capital 5 [Karl Marx Alemão, Frederich Engels Alemão]]" ]
+  "listaExemplar" : [ {
+    "codigo" : 2,
+    "dataAq" : [ 2022, 10, 10, 20, 39, 1, 471812000 ],
+    "quantidade" : 3,
+    "nome" : "Saci",
+    "disponivel" : true,
+    "listaLivro" : [ {
+      "titulo" : "Saci",
+      "codigo" : 7,
+      "listaAutor" : [ {
+        "nome" : "Xi",
+        "sobreNome" : "Jinping",
+        "nacionalidade" : "China"
+      } ]
+    } ]
+  } ]
 } ]
