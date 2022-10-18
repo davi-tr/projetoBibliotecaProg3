@@ -47,7 +47,7 @@ public class GuiInicial {
                 }
             }
         });
-        ImageIcon icon = new ImageIcon("C:\\Users\\Davi\\Desktop\\N1PROG3\\projBiblioteca\\login.png");
+        ImageIcon icon = new ImageIcon("C:\\Users\\Davi Trajano\\Desktop\\projetoBibliotecaProg3\\login.png");
         btnLogin.setIcon(icon);
     }
     public JPanel getjPanel() {
