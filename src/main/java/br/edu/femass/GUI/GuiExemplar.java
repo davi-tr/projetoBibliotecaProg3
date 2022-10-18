@@ -45,7 +45,22 @@ public class GuiExemplar {
                 }
             }
         });
-        
+
+        lstLivros.addListSelectionListener(new ListSelectionListener() {
+            @Override
+            public void valueChanged(ListSelectionEvent e) {
+                    List<Livro> livros = new ArrayList<>();
+                    livros.addAll(lstLivros.getSelectedValuesList());
+                    for(Livro l : livros){
+                        if(l.getTitulo() != null){
+                            nomeAutor.setText(l.getNomeAutor());
+                            sobreNome.setText(l.getSobreNomeAutor());
+                            nacionalidade.setText(l.getNacionalidadeAutor());
+                        }
+                    }
+                }
+                
+        });
     }
     private void updateList() {
         try {

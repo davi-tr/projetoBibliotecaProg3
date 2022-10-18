@@ -2,13 +2,22 @@ package br.edu.femass.model;
 
 import br.edu.femass.dao.DaoLivro;
 import br.edu.femass.dao.DaoProfessor;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Livro {
     protected String titulo;
+    @JsonIgnore
+    protected String nomeAutor;
+    @JsonIgnore
+    protected String sobreNomeAutor;
+    @JsonIgnore
+    protected String nacionalidadeAutor;
+
     protected Long codigo;
+
     protected static Long proximoNumero = 1l;
     List<Autor> listaAutor = new ArrayList();
 
@@ -46,6 +55,26 @@ public class Livro {
         Livro.proximoNumero = proximoNumero;
     }
 
+    public String getNacionalidadeAutor() {
+        for(Autor au : listaAutor){
+            nacionalidadeAutor = au.getNacionalidade();
+        }
+        return nacionalidadeAutor;
+    }
+
+    public String getSobreNomeAutor() {
+        for(Autor au : listaAutor){
+            sobreNomeAutor = au.getSobreNome();
+        }
+        return sobreNomeAutor;
+    }
+
+    public String getNomeAutor(){
+        for(Autor au : listaAutor){
+            nomeAutor = au.getNome();
+        }
+        return nomeAutor;
+    }
     public void atualizarID() {
         Long maior = 0L;
         try {
