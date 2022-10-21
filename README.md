@@ -14,8 +14,8 @@ Classes mapeadas para o Java | Interface gráfica usando Swing | Persistência u
 ---
 Nota obtida | Nota maxima
 :----- | :------
-<p align="center">==7,5==</p> | <p align="center">10</p>
+7,5 | 10
 ---
-<div align="center">
+
 #### Meu linkedin abaixo.
- <a href="https://www.linkedin.com/in/davi-trajano-902483205" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
+<a href="https://www.linkedin.com/in/davi-trajano-902483205" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
